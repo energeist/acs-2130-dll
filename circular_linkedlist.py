@@ -181,11 +181,9 @@ def test_circular_linked_list():
             print('delete({!r})'.format(item))
             cll.delete(item)
             print('list: {}'.format(cll))
-
         print('head: {}'.format(cll.head))
         print('tail: {}'.format(cll.tail))
         print('length: {}'.format(cll.length()))
-
 
 if __name__ == '__main__':
     test_circular_linked_list()
