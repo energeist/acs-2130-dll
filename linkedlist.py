@@ -128,7 +128,7 @@ class LinkedList:
         next_node = None
         if self.head:
             current_node = self.head
-            while item not in current_node.data: # loop until data is found
+            while item != current_node.data: # loop until data is found
                 if current_node.next == None:
                     raise ValueError('Item not found: {}'.format(item))
                 else:
