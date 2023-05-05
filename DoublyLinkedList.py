@@ -5,7 +5,6 @@ class DoublyLinkedList:
     def __init__(self):
         self.head = None
         self.tail = None
-        self.size = 0
 
     # TODO: append()
     #Add to the end of the linked list
@@ -14,7 +13,6 @@ class DoublyLinkedList:
             new_node = Node(new_data)
             self.head = new_node
             self.tail = new_node
-            self.size += 1
         else:
             #create a new node
             new_node = Node(new_data)
@@ -24,7 +22,6 @@ class DoublyLinkedList:
             self.tail.next = new_node
             #move tail to new node
             self.tail = new_node
-            self.size += 1
 
     # TODO: insert()
     def insert(self, item, index):
@@ -36,7 +33,6 @@ class DoublyLinkedList:
                 new_node.previous = current_node
                 current_node.next.previous = new_node
                 current_node.next = new_node
-                self.size += 1
                 return f"inserted node with data {item} after node with {current_node.data} and before node with {new_node.next.data}"
             else:
                 current_node = current_node.next
@@ -50,7 +46,6 @@ class DoublyLinkedList:
             if current_node.data == value:
                 current_node.previous.next = current_node.next
                 current_node.next.previous = current_node.previous
-                self.size -= 1
                 return f"Deleted node with data {value}"
             elif current_node.next == None:
                 raise ValueError    

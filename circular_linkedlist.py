@@ -96,6 +96,8 @@ class CircularLinkedList:
         while node:
             if matcher in node.data:
                 return True
+            if node.next == self.head:
+                break
             node = node.next
         return False
 
